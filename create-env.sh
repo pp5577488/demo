@@ -7,7 +7,7 @@ do
 	echo "=============================="
     echo "Creating springdemocontainer$i container.."
     sleep 1
-    docker run --name springdemocontainer$i -d -it demo/springdemo-img /bin/bash
+    docker run -it --name springdemocontainer$i -p 8888:8080 -d  demo/springdemo-img /bin/bash
     echo "springdemocontainer$i container has been created!"
 	echo "=============================="
 done
