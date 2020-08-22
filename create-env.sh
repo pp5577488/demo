@@ -5,10 +5,10 @@ sleep 2;
 for i in `seq $cont_count`
 do
 	echo "=============================="
-    echo "Creating www.helloworld$i container.."
+    echo "Creating springdemocontainer$i container.."
     sleep 1
-    docker run --name www.helloworld$i -d -it demo/springdemo-img /bin/bash
-    echo "springdemo$i container has been created!"
+    docker run --name springdemocontainer$i -d -it demo/springdemo-img /bin/bash
+    echo "springdemocontainer$i container has been created!"
 	echo "=============================="
 done
 #docker inspect --format {{.NetworkSettings.Networks.bridge.IPAddress}} `docker ps -q` > IPs.txt
