@@ -84,7 +84,7 @@ pipeline {
 			steps {
 				sh 'docker build -t demo/springdemo-img -f Dockerfile .'
 			//	sh 'docker rm -f ${docker ps -q}'
-                                sh './create-env.sh 3'
+                                sh './create-env.sh 1'
 	    	}
 		}
     }
